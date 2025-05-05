@@ -1,73 +1,68 @@
-import rclpy
-from rclpy.node import Node
-from rclpy.action import ActionClient
-from nav2_msgs.action import NavigateToPose
-from geometry_msgs.msg import PoseStamped
-from sensor_msgs.msg import Image
-from cv_bridge import CvBridge
+import threading
+import sys, time
 import cv2
 import numpy as np
-import time
+import rclpy
+from rclpy.node import Node
+from geometry_msgs.msg import Twist, Vector3
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge, CvBridgeError
+from rclpy.exceptions import ROSInterruptException
+import signal
+from rclpy.action import ActionClient
+from nav2_msgs.action import NavigateToPose
+from math import sin, cos
 
 
-class ColourDetector(Node):
+class ColourExplorer(Node):
     def __init__(self):
-        super().__init__('colour_detector')
+        super().__init__('colour_explorer')
+        self.publisher = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.image_subscriber = self.create_subscription(Image, '/camera/image_raw', self.process_image, 10)
         self.bridge = CvBridge()
+        self.rate = self.create_rate(10)
 
-        self.image_sub = self.create_subscription(
-            Image,
-            '/camera/image_raw',
-            self.image_callback,
-            10
-        )
+        # Detection flags
+        self.seen = {'red': False, 'green': False, 'blue': False}
+        self.too_close = False
 
-        self.nav_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
-        self.goal_sent = False
+        cv2.namedWindow('camera_feed', cv2.WINDOW_NORMAL)
+        cv2.resizeWindow('camera_feed', 320, 240)
 
-        # HSV bounds
-        self.bounds = {
+    def move_forward(self, duration_sec=2, speed=0.2):
+        msg = Twist()
+        msg.linear.x = speed
+        for _ in range(duration_sec * 10):
+            self.publisher.publish(msg)
+            self.rate.sleep()
+        self.stop()
+
+    def rotate(self, angle_rads=1.57, angular_speed=0.3):
+        twist = Twist()
+        duration = int(abs(angle_rads / angular_speed) * 10)
+        twist.angular.z = angular_speed if angle_rads > 0 else -angular_speed
+        for _ in range(duration):
+            self.publisher.publish(twist)
+            self.rate.sleep()
+        self.stop()
+
+    def stop(self):
+        self.publisher.publish(Twist())
+
+    def process_image(self, msg):
+        frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+        hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+        bounds = {
             'red': [
                 (np.array([0, 120, 70]), np.array([10, 255, 255])),
                 (np.array([170, 120, 70]), np.array([180, 255, 255]))
             ],
-            'green': [
-                (np.array([35, 100, 100]), np.array([85, 255, 255]))
-            ],
-            'blue': [
-                (np.array([90, 100, 100]), np.array([130, 255, 255]))
-            ]
+            'green': [(np.array([50, 100, 100]), np.array([70, 255, 255]))],
+            'blue': [(np.array([110, 100, 100]), np.array([130, 255, 255]))]
         }
 
-        # Start Nav2 after delay
-        self.get_logger().info('Waiting for Nav2...')
-        time.sleep(10)
-        self.get_logger().info('Sending goal...')
-        self.send_goal(2.0, 2.0, 0.0)  # You can tweak this
-
-    def send_goal(self, x, y, theta):
-        goal_msg = NavigateToPose.Goal()
-        goal_msg.pose.header.frame_id = 'map'
-        goal_msg.pose.header.stamp = self.get_clock().now().to_msg()
-
-        goal_msg.pose.pose.position.x = x
-        goal_msg.pose.pose.position.y = y
-        goal_msg.pose.pose.orientation.z = np.sin(theta / 2.0)
-        goal_msg.pose.pose.orientation.w = np.cos(theta / 2.0)
-
-        self.nav_client.wait_for_server()
-        self.nav_client.send_goal_async(goal_msg)
-
-    def image_callback(self, msg):
-        if self.goal_sent:
-            return
-
-        frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-        hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-
-        found_blue_close = False
-
-        for colour, ranges in self.bounds.items():
+        for colour, ranges in bounds.items():
             mask = None
             for lower, upper in ranges:
                 m = cv2.inRange(hsv, lower, upper)
@@ -77,26 +72,82 @@ class ColourDetector(Node):
             if contours:
                 largest = max(contours, key=cv2.contourArea)
                 area = cv2.contourArea(largest)
+                if area > 100:
+                    self.seen[colour] = True
+                    print(f"[{colour.upper()}] Found — Area: {area:.1f}")
 
-                if area > 1000:
-                    print(f"{area:.1f}  {colour} found")
+                    rect = cv2.minAreaRect(largest)
+                    box = np.int0(cv2.boxPoints(rect))
+                    center = tuple(map(int, rect[0]))
 
-                    if colour == "blue" and area > 3000:
-                        found_blue_close = True
+                    cv2.polylines(frame, [box], True, (255, 255, 0), 2)
+                    cv2.putText(frame, f"{colour.capitalize()}", (center[0]-30, center[1]-10),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
 
-        if found_blue_close:
-            self.get_logger().info("Blue object detected within 1m. Cancelling goal.")
-            self.cancel_goal()
-            self.goal_sent = True
+                    if colour == 'blue' and area > 180000:
+                        self.too_close = True
+                else:
+                    self.seen[colour] = False
 
-    def cancel_goal(self):
-        self.nav_client._goal_handle.cancel_goal_async()
-
+        cv2.imshow('camera_feed', frame)
+        cv2.waitKey(3)
 
 def main():
     rclpy.init()
-    node = ColourDetector()
-    rclpy.spin(node)
+    node = ColourExplorer()
+
+    def shutdown_handler(sig, frame):
+        rclpy.shutdown()
+    signal.signal(signal.SIGINT, shutdown_handler)
+
+    thread = threading.Thread(target=rclpy.spin, args=(node,), daemon=True)
+    thread.start()
+
+    try:
+        path = [
+            (1.57, 0),
+            (0, 10),
+            (1.2, 0),
+            (0, 10),
+            (1.6, 0),
+            (0, 10),
+            (1.6, 0),
+            (0, 10)
+        ]
+        path_index = 0
+
+        while rclpy.ok():
+            if node.too_close:
+                node.stop()
+                print("[TASK COMPLETE] Blue box reached within 1m.")
+                break
+
+            if node.seen['blue'] and not node.too_close:
+                print("[ACTION] Moving toward blue...")
+                node.move_forward(2)
+
+            elif any(node.seen.values()):
+                # Seen red/green but not blue → explore further
+                print("[ACTION] Exploring more of map...")
+                node.rotate(1.0)
+                node.move_forward(2)
+
+            elif path_index < len(path):
+                angle, forward_time = path[path_index]
+                if angle != 0:
+                    node.rotate(angle)
+                if forward_time != 0:
+                    node.move_forward(forward_time)
+                path_index += 1
+
+            else:
+                print("[IDLE] Nothing detected — rotating to search...")
+                node.rotate(0.7)
+
+    except ROSInterruptException:
+        pass
+
+    cv2.destroyAllWindows()
     node.destroy_node()
     rclpy.shutdown()
 
