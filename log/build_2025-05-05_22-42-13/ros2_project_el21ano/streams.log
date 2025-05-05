@@ -1,0 +1,53 @@
+[0.693s] Invoking command in '/home/angel/ros2_ws/src/ros2_project_el21ano': PYTHONPATH=/home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/prefix_override:/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/ros2_project_el21ano build --build-base /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build install --record /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/install.log --single-version-externally-managed install_data
+[0.899s] running egg_info
+[0.900s] creating build/ros2_project_el21ano/ros2_project_el21ano.egg-info
+[0.900s] writing build/ros2_project_el21ano/ros2_project_el21ano.egg-info/PKG-INFO
+[0.902s] writing dependency_links to build/ros2_project_el21ano/ros2_project_el21ano.egg-info/dependency_links.txt
+[0.903s] writing entry points to build/ros2_project_el21ano/ros2_project_el21ano.egg-info/entry_points.txt
+[0.903s] writing requirements to build/ros2_project_el21ano/ros2_project_el21ano.egg-info/requires.txt
+[0.903s] writing top-level names to build/ros2_project_el21ano/ros2_project_el21ano.egg-info/top_level.txt
+[0.904s] writing manifest file 'build/ros2_project_el21ano/ros2_project_el21ano.egg-info/SOURCES.txt'
+[0.905s] reading manifest file 'build/ros2_project_el21ano/ros2_project_el21ano.egg-info/SOURCES.txt'
+[0.906s] writing manifest file 'build/ros2_project_el21ano/ros2_project_el21ano.egg-info/SOURCES.txt'
+[0.906s] running build
+[0.906s] running build_py
+[0.906s] creating /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build
+[0.907s] creating /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib
+[0.907s] creating /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+[0.908s] copying ros2_project_el21ano/first_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+[0.908s] copying ros2_project_el21ano/fourth_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+[0.908s] copying ros2_project_el21ano/third_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+[0.909s] copying ros2_project_el21ano/second_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+[0.910s] copying ros2_project_el21ano/answer.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+[0.911s] copying ros2_project_el21ano/__init__.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+[0.911s] running install
+[0.912s] running install_lib
+[0.912s] creating /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+[0.913s] copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/first_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+[0.913s] copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/fourth_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+[0.914s] copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/third_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+[0.915s] copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/second_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+[0.915s] copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/answer.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+[0.915s] copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/__init__.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+[0.916s] byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/first_step.py to first_step.cpython-310.pyc
+[0.918s] byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/fourth_step.py to fourth_step.cpython-310.pyc
+[0.919s] byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/third_step.py to third_step.cpython-310.pyc
+[0.921s] byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/second_step.py to second_step.cpython-310.pyc
+[0.923s] byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/answer.py to answer.cpython-310.pyc
+[0.924s] byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/__init__.py to __init__.cpython-310.pyc
+[0.926s] running install_data
+[0.928s] creating /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ament_index
+[0.930s] creating /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ament_index/resource_index
+[0.931s] creating /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ament_index/resource_index/packages
+[0.932s] copying resource/ros2_project_el21ano -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ament_index/resource_index/packages
+[0.932s] copying package.xml -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano
+[0.932s] running install_egg_info
+[0.933s] Copying build/ros2_project_el21ano/ros2_project_el21ano.egg-info to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano-0.0.0-py3.10.egg-info
+[0.939s] running install_scripts
+[0.961s] Installing answer script to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/ros2_project_el21ano
+[0.963s] Installing first_step script to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/ros2_project_el21ano
+[0.963s] Installing fourth_step script to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/ros2_project_el21ano
+[0.963s] Installing second_step script to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/ros2_project_el21ano
+[0.964s] Installing third_step script to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/ros2_project_el21ano
+[0.964s] writing list of installed files to '/home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/install.log'
+[0.996s] Invoked command in '/home/angel/ros2_ws/src/ros2_project_el21ano' returned '0': PYTHONPATH=/home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/prefix_override:/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/ros2_project_el21ano build --build-base /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build install --record /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/install.log --single-version-externally-managed install_data

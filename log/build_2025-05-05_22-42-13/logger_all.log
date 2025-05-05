@@ -1,0 +1,92 @@
+[0.147s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.147s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fbf1e46d8d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fbf1e5ae530>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fbf1e5ae530>>)
+[0.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.350s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/angel/ros2_ws/src/ros2_project_el21ano'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.364s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_python' and name 'ros2_project_el21ano'
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.395s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 9 installed packages in /home/angel/ros2_ws/install
+[0.396s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 385 installed packages in /opt/ros/humble
+[0.397s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'ros2_project_el21ano' build argument 'cmake_args' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'ros2_project_el21ano' build argument 'cmake_target' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'ros2_project_el21ano' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'ros2_project_el21ano' build argument 'cmake_clean_cache' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'ros2_project_el21ano' build argument 'cmake_clean_first' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'ros2_project_el21ano' build argument 'cmake_force_configure' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'ros2_project_el21ano' build argument 'ament_cmake_args' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'ros2_project_el21ano' build argument 'catkin_cmake_args' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'ros2_project_el21ano' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.449s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_project_el21ano' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano', 'merge_install': False, 'path': '/home/angel/ros2_ws/src/ros2_project_el21ano', 'symlink_install': False, 'test_result_base': None}
+[0.449s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.450s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.451s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/angel/ros2_ws/src/ros2_project_el21ano' with build type 'ament_python'
+[0.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_project_el21ano', 'ament_prefix_path')
+[0.454s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano/hook/ament_prefix_path.ps1'
+[0.461s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano/hook/ament_prefix_path.dsv'
+[0.462s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano/hook/ament_prefix_path.sh'
+[0.463s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.463s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.680s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/angel/ros2_ws/src/ros2_project_el21ano'
+[0.680s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.680s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.144s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/angel/ros2_ws/src/ros2_project_el21ano': PYTHONPATH=/home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/prefix_override:/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/ros2_project_el21ano build --build-base /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build install --record /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/install.log --single-version-externally-managed install_data
+[1.447s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/angel/ros2_ws/src/ros2_project_el21ano' returned '0': PYTHONPATH=/home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/prefix_override:/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/ros2_project_el21ano build --build-base /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build install --record /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/install.log --single-version-externally-managed install_data
+[1.450s] Level 1:colcon.colcon_core.environment:checking '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano' for CMake module files
+[1.450s] Level 1:colcon.colcon_core.environment:checking '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano' for CMake config files
+[1.451s] Level 1:colcon.colcon_core.environment:checking '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib'
+[1.451s] Level 1:colcon.colcon_core.environment:checking '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/bin'
+[1.451s] Level 1:colcon.colcon_core.environment:checking '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/pkgconfig/ros2_project_el21ano.pc'
+[1.451s] Level 1:colcon.colcon_core.environment:checking '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages'
+[1.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_project_el21ano', 'pythonpath')
+[1.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano/hook/pythonpath.ps1'
+[1.452s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano/hook/pythonpath.dsv'
+[1.452s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano/hook/pythonpath.sh'
+[1.453s] Level 1:colcon.colcon_core.environment:checking '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/bin'
+[1.453s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_project_el21ano)
+[1.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano/package.ps1'
+[1.455s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano/package.dsv'
+[1.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano/package.sh'
+[1.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano/package.bash'
+[1.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano/package.zsh'
+[1.460s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/colcon-core/packages/ros2_project_el21ano)
+[1.464s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.465s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.465s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.465s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.474s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.474s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.474s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.474s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.476s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[1.476s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.477s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/local_setup.ps1'
+[1.478s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/angel/ros2_ws/src/ros2_project_el21ano/install/_local_setup_util_ps1.py'
+[1.480s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/setup.ps1'
+[1.482s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/local_setup.sh'
+[1.483s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/angel/ros2_ws/src/ros2_project_el21ano/install/_local_setup_util_sh.py'
+[1.484s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/setup.sh'
+[1.486s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/local_setup.bash'
+[1.487s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/setup.bash'
+[1.489s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/local_setup.zsh'
+[1.490s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/angel/ros2_ws/src/ros2_project_el21ano/install/setup.zsh'

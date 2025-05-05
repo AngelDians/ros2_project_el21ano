@@ -1,0 +1,51 @@
+running egg_info
+creating build/ros2_project_el21ano/ros2_project_el21ano.egg-info
+writing build/ros2_project_el21ano/ros2_project_el21ano.egg-info/PKG-INFO
+writing dependency_links to build/ros2_project_el21ano/ros2_project_el21ano.egg-info/dependency_links.txt
+writing entry points to build/ros2_project_el21ano/ros2_project_el21ano.egg-info/entry_points.txt
+writing requirements to build/ros2_project_el21ano/ros2_project_el21ano.egg-info/requires.txt
+writing top-level names to build/ros2_project_el21ano/ros2_project_el21ano.egg-info/top_level.txt
+writing manifest file 'build/ros2_project_el21ano/ros2_project_el21ano.egg-info/SOURCES.txt'
+reading manifest file 'build/ros2_project_el21ano/ros2_project_el21ano.egg-info/SOURCES.txt'
+writing manifest file 'build/ros2_project_el21ano/ros2_project_el21ano.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build
+creating /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib
+creating /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+copying ros2_project_el21ano/first_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+copying ros2_project_el21ano/fourth_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+copying ros2_project_el21ano/third_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+copying ros2_project_el21ano/second_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+copying ros2_project_el21ano/answer.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+copying ros2_project_el21ano/__init__.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano
+running install
+running install_lib
+creating /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/first_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/fourth_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/third_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/second_step.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/answer.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+copying /home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/build/lib/ros2_project_el21ano/__init__.py -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano
+byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/first_step.py to first_step.cpython-310.pyc
+byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/fourth_step.py to fourth_step.cpython-310.pyc
+byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/third_step.py to third_step.cpython-310.pyc
+byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/second_step.py to second_step.cpython-310.pyc
+byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/answer.py to answer.cpython-310.pyc
+byte-compiling /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ament_index
+creating /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ament_index/resource_index
+creating /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ament_index/resource_index/packages
+copying resource/ros2_project_el21ano -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ament_index/resource_index/packages
+copying package.xml -> /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/share/ros2_project_el21ano
+running install_egg_info
+Copying build/ros2_project_el21ano/ros2_project_el21ano.egg-info to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/python3.10/site-packages/ros2_project_el21ano-0.0.0-py3.10.egg-info
+running install_scripts
+Installing answer script to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/ros2_project_el21ano
+Installing first_step script to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/ros2_project_el21ano
+Installing fourth_step script to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/ros2_project_el21ano
+Installing second_step script to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/ros2_project_el21ano
+Installing third_step script to /home/angel/ros2_ws/src/ros2_project_el21ano/install/ros2_project_el21ano/lib/ros2_project_el21ano
+writing list of installed files to '/home/angel/ros2_ws/src/ros2_project_el21ano/build/ros2_project_el21ano/install.log'

@@ -1,0 +1,7 @@
+[console_scripts]
+answer = ros2_project_el21ano.answer:main
+first_step = ros2_project_el21ano.first_step:main
+fourth_step = ros2_project_el21ano.fourth_step:main
+second_step = ros2_project_el21ano.second_step:main
+third_step = ros2_project_el21ano.third_step:main
+
